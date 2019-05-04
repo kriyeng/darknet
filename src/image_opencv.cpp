@@ -463,7 +463,6 @@ void write_frame_cv(write_cv *output_video_writer, mat_cv *mat)
         cv::VideoWriter *out = (cv::VideoWriter *)output_video_writer;
         //out->write(ipl_to_mat(show_img));
         out->write(*mat);
-        show_image_mat(mat, "mat");
     }
     catch (...) {
         cerr << "OpenCV exception: write_frame_cv \n";
